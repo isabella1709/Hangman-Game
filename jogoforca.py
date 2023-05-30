@@ -3,10 +3,10 @@ import random
 palavras = ['quadriceps', 'gluteo', 'posterior', 'ombro', 'costas', 'peito', 'triceps', 'biceps' ]
 palavra_random = random.choice(palavras)
 palavra_oculta = ['_'] * len(palavra_random)
-tentativas = 10
+tentativas = 20
 
 print("\n-Jogo da forca maromba-\n")
-print("Você possuira 8 tentativas para acertar sua palavra!\n")
+print("Você possuira 20 tentativas para acertar sua palavra!\n")
 
 for tentativa in range(tentativas):
     
@@ -28,11 +28,11 @@ for tentativa in range(tentativas):
         break
 
 
-if '_' not in palavra_random and palavra_random == 'quadriceps' or palavra_random == 'gluteo' or palavra_random == 'posterior':
+if ('_' not in palavra_oculta) and (palavra_random== 'quadriceps' or palavra_random == 'gluteo' or palavra_random == 'posterior'):
     print("Parabéns, você é um maromba de verdade e isso é um sinal para você ir treinar inferiores!")
-elif '_' not in palavra_random and palavra_random == 'ombro' or palavra_random == 'biceps' or palavra_random == 'costas' or palavra_random == 'peito' or palavra_random == 'triceps':
+elif ('_' not in palavra_oculta) and (palavra_random == 'ombro' or palavra_random == 'biceps' or palavra_random == 'costas' or palavra_random == 'peito' or palavra_random == 'triceps'):
     print("Parabéns, você é um maromba de verdade e isso é um sinal para você ir treinar superiores!")
-else: 
+elif ('_' in palavra_oculta):
     print("Você perdeu...frango!")
 
 
